@@ -1,0 +1,44 @@
+.ProjectHero {
+    max-width: 1248px;
+    padding: 0 24px 0 24px;
+    margin: 0 auto;
+  }
+
+.ProjectHero h1 {
+    font-weight: 700;
+    font-size: 72px;
+    margin: 0 0 0 0;
+}
+  
+.ProjectHero .ProjectDescription {
+  font-size: 35px;
+  margin: 0 0 0 0;
+  text-transform: lowercase;
+}
+
+.ProjectHero img {
+  width: 100%;
+  margin: 80px 0 0 0;
+}
+
+.ProjectRole {
+  text-align: right;
+  padding: 80px 0 0 0;
+}
+
+.ProjectRole .ProjectRoleTitle {
+  font-size: 24px;
+}
+
+.ProjectRole .ProjectRoleMyRole {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 520px) {
+  .ProjectHero h1 {
+    font-weight: 700;
+    font-size: 60px;
+    margin: 0 0 0 0;
+}
+}

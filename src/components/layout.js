@@ -8,8 +8,15 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import Helmet from 'react-helmet'
+
+import favicon16 from "../images/favicon/favicon16.png";
+import favicon32 from "../images/favicon/favicon32.png";
+import favicon64 from "../images/favicon/favicon64.png";
 
 import Header from "./header"
+import Footer from "./footer"
+
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -25,21 +32,22 @@ const Layout = ({ children }) => {
 
   return (
     <>
+    <Helmet
+      title={data.site.siteMetadata.title}
+      meta={[
+        { name: 'description', content: ' Marta Muniz - Illustrator and graphic designer' },
+        { name: 'keywords', content: 'illustrator, graphic designer' },
+      ]}
+      link={[
+        { rel: 'icon', type: 'image/png', sizes: "16x16", href: `${favicon16}` },
+        { rel: 'icon', type: 'image/png', sizes: "32x32", href: `${favicon32}` },
+        { rel: 'shortcut icon', type: 'image/png', href: `${favicon64}` },
+    ]}
+    />
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
+      <div>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+      <Footer />
       </div>
     </>
   )

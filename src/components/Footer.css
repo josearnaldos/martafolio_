@@ -1,0 +1,49 @@
+.Footer {
+    position: relative;
+    width: 100%;
+    padding: 86px 0;
+    z-index: 100;
+}
+
+.FooterGroup {
+    max-width: 1248px;
+    padding: 0 24px 0 24px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    color: #818182;
+    font-size: 14px;
+}
+
+.SocialLinks {
+    justify-self: end;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-content: middle;
+    justify-items: center;
+}
+
+.SocialLinks a {
+    margin: 0 0 0 8px;
+}
+
+.SocialLinks svg {
+    fill: #818182;
+    transition: 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.dribbble svg:hover {
+    fill: #ea4c89;
+}
+
+.behance svg:hover {
+    fill: #053eff;
+}
+
+.linkedin svg:hover {
+    fill: #0077B5;
+}
+.email svg:hover {
+    fill: #228B22;
+}
